@@ -1,26 +1,8 @@
-import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import React from "react";
+import AppNavigator from "./src/navigation/AppNavigator";
 
-function App(): React.JSX.Element {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello, World!</Text>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#000',
-  },
-});
+const App = () => {
+  return <AppNavigator />;
+};
 
 export default App;
