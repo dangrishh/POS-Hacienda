@@ -81,13 +81,16 @@ const Card: React.FC<CardProps> = (props) => {
         <TouchableOpacity style={styles.button} onPress={() => setModalVisible(true)}>
           <Text style={styles.buttonText}>Details</Text>
         </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Edit Info</Text>
+        </TouchableOpacity>
       </View>
 
       {/* Pass modal state as props to TransactDetails */}
       <TransactDetails 
         {...props} 
-        modalVisible={modalVisible} 
-        setModalVisible={setModalVisible} 
+        modalVisible={modalVisible}  // Pass modalVisible state
+        setModalVisible={setModalVisible}  // Pass setModalVisible function
       />
 
       {/* Assign Staff */}

@@ -1,31 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, Text, TouchableOpacity, Modal, StyleSheet } from 'react-native';
 import styles from '../styles/CardStyles';
 import { CardProps } from '../components/TransactCard';
 
 const TransactDetails: React.FC<CardProps> = (props) => {
-  const [modalVisible, setModalVisible] = useState(false);
-
   return (
-    <View style={styles.card}>
-      <View style={styles.cardHeader}>
-        <Text style={styles.guestName}>{props.guestName}</Text>
-        <View style={styles.roomTag}><Text style={styles.roomText}>{props.room}</Text></View>
-        <View style={styles.dateTag}><Text style={styles.dateText}>{props.date}</Text></View>
-      </View>
-      <Text style={styles.refNumber}>
-        Reference No. <Text style={{ fontWeight: 'bold' }}>{props.referenceNumber}</Text>
-      </Text>
-
-      {/* Buttons */}
-      <View style={styles.buttonRow}>
-        <TouchableOpacity style={styles.button} onPress={() => setModalVisible(true)}>
-          <Text style={styles.buttonText}>Details</Text>
-        </TouchableOpacity>
-      </View>
+    <View>
 
       {/* Modal for Transaction Details */}
-      <Modal animationType="fade" transparent visible={modalVisible} onRequestClose={() => setModalVisible(false)}>
+      <Modal animationType="fade" transparent visible={props.modalVisible} onRequestClose={() => props.setModalVisible?.(false)}>
         <View style={modalStyles.overlay}>
           <View style={modalStyles.modalContainer}>
             <Text style={modalStyles.modalHeader}>Transaction Details</Text>
@@ -35,7 +18,7 @@ const TransactDetails: React.FC<CardProps> = (props) => {
             <Text>Downpayment: {props.downpayment} php</Text>
             <Text>Balance: {props.balance} php</Text>
 
-            <TouchableOpacity onPress={() => setModalVisible(false)} style={modalStyles.closeButton}>
+            <TouchableOpacity onPress={() => props.setModalVisible?.(false)} style={modalStyles.closeButton}>
               <Text style={modalStyles.closeText}>X</Text>
             </TouchableOpacity>
           </View>
