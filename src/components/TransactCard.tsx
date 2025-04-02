@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styles from '../styles/CardStyles';
+import TransactDetails from '../components/TransactDetails';
 
-interface CardProps {
+export interface CardProps {
   guestName: string;
   referenceNumber: string;
   room: string;
@@ -23,6 +24,8 @@ interface CardProps {
   downpayment: number;
   balance: number;
   discounts: number;
+  modalVisible?: boolean;  // Add modalVisible as optional
+  setModalVisible?: React.Dispatch<React.SetStateAction<boolean>>;  // Add setModalVisible as optional
 }
 
 const DetailsRow: React.FC<{ label: string; value: string | number }> = ({ label, value }) => (
@@ -33,6 +36,8 @@ const DetailsRow: React.FC<{ label: string; value: string | number }> = ({ label
 );
 
 const Card: React.FC<CardProps> = (props) => {
+  const [modalVisible, setModalVisible] = useState(false);  // Add modal state here
+
   return (
     <View style={styles.card}>
       <View style={styles.cardHeader}>
@@ -43,7 +48,6 @@ const Card: React.FC<CardProps> = (props) => {
       <Text style={styles.refNumber}>
         Reference No. <Text style={{ fontWeight: 'bold' }}>{props.referenceNumber}</Text>
       </Text>
-
 
       {/* Structured Details Grid */}
       <View style={styles.detailsGrid}>
@@ -72,19 +76,25 @@ const Card: React.FC<CardProps> = (props) => {
         <DetailsRow label="Discounts" value={`${props.discounts} php`} />
       </View>
 
-      {/* Buttons */}
+      {/* Button to Open Details */}
       <View style={styles.buttonRow}>
-        <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>Details</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>Edit Info</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => setModalVisible(true)}>
+          <Text style={styles.buttonText}>Details</Text>
+        </TouchableOpacity>
       </View>
+
+      {/* Pass modal state as props to TransactDetails */}
+      <TransactDetails 
+        {...props} 
+        modalVisible={modalVisible} 
+        setModalVisible={setModalVisible} 
+      />
 
       {/* Assign Staff */}
       <View style={styles.assignContainer}>
         <View style={styles.profilePlaceholder} />
         <Text style={styles.assignText}>Assign Staff</Text>
       </View>
-
-      
     </View>
   );
 };
