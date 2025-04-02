@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   sidebar: { 
-    flex: .2,
+    flex: .16,
     backgroundColor: '#ffffff', 
     padding: 20,
     alignItems: "center",

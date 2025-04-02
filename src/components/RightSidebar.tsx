@@ -5,7 +5,11 @@ import styles from '../styles/RightSidebarStyles';
 const RightSidebar = () => {
   return (
     <View style={styles.rightSidebar}>
-      <TouchableOpacity style={styles.checkInButton}><Text style={styles.checkInText}>+ Check-In</Text></TouchableOpacity>
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity style={styles.checkInButton}>
+            <Text style={styles.checkInText}>+ Add Check In</Text>
+          </TouchableOpacity>
+        </View>
       <View style={styles.barHeader}>
         <Text style={styles.sidebarHeader}>Cottages</Text>
         <Text style={styles.sidebarSort_btn}>Sort</Text>

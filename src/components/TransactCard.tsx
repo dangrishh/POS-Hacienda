@@ -40,7 +40,10 @@ const Card: React.FC<CardProps> = (props) => {
         <View style={styles.roomTag}><Text style={styles.roomText}>{props.room}</Text></View>
         <View style={styles.dateTag}><Text style={styles.dateText}>{props.date}</Text></View>
       </View>
-      <Text style={styles.refNumber}>Reference No. {props.referenceNumber}</Text>
+      <Text style={styles.refNumber}>
+        Reference No. <Text style={{ fontWeight: 'bold' }}>{props.referenceNumber}</Text>
+      </Text>
+
 
       {/* Structured Details Grid */}
       <View style={styles.detailsGrid}>
@@ -69,17 +72,19 @@ const Card: React.FC<CardProps> = (props) => {
         <DetailsRow label="Discounts" value={`${props.discounts} php`} />
       </View>
 
+      {/* Buttons */}
+      <View style={styles.buttonRow}>
+        <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>Details</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>Edit Info</Text></TouchableOpacity>
+      </View>
+
       {/* Assign Staff */}
       <View style={styles.assignContainer}>
         <View style={styles.profilePlaceholder} />
         <Text style={styles.assignText}>Assign Staff</Text>
       </View>
 
-      {/* Buttons */}
-      <View style={styles.buttonRow}>
-        <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>Total Amount</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>Edit Info</Text></TouchableOpacity>
-      </View>
+      
     </View>
   );
 };

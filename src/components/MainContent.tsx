@@ -12,7 +12,7 @@ const MainContent = () => {
         <TouchableOpacity style={styles.inactiveTab}><Text style={styles.tabText}>Canceled</Text></TouchableOpacity>
       </View>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Upcoming Check In</Text>
+        <Text style={styles.headerText}>Today   |   Upcomings</Text>
         <Text style={styles.headerSortBtn}>Sort</Text>
       </View>
 

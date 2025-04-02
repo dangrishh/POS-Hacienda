@@ -2,18 +2,24 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   rightSidebar: { 
-    flex: .3,  
+    flex: .35,  
     alignItems: "left",
-    paddingTop: 70,
+    paddingTop: 25,
     //backgroundColor: "#555",
     paddingLeft: 15,
+  },
+
+  buttonContainer: {
+    //backgroundColor: "blue",
+    width: 275,
+    alignItems: "flex-end" 
   },
 
   checkInButton: { 
     backgroundColor: 'black', 
     padding: 10, 
     borderRadius: 5, 
-    width: "70%",
+    width: 200,
     marginBottom: 10,
     alignItems: "center",
     alignSelf: "center"
@@ -27,7 +33,7 @@ export default StyleSheet.create({
 
   barHeader: {
     //backgroundColor: "blue",
-    width: 250,
+    width: 240,
     marginBottom: 15,
     flexDirection: "row",  // Align items in a row
     justifyContent: "space-between",  // Push "Sort" to the right
@@ -52,10 +58,10 @@ export default StyleSheet.create({
 
   cottageBoxes: {
     backgroundColor: "#E6E6E6",
-    padding: 25,
+    padding: 15,
     alignItems: "flex-start",
     height: "80%",
-    width: 250,
+    width: 240,
     borderRadius: 5
   },
 
@@ -77,8 +83,8 @@ export default StyleSheet.create({
   },
 
   cottageBox: { 
-    width: 50, 
-    height: 50, 
+    width: 55, 
+    height: 55, 
     justifyContent: 'center', 
     alignItems: 'center', 
     margin: 5, 

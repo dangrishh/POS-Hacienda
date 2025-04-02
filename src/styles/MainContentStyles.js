@@ -2,10 +2,10 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   mainContent: {
-    flex: .8,
+    flex: .7,
     padding: 15,
     //backgroundColor: '#F5F5F5',
-    paddingTop: 70
+    paddingTop: 30
   },
   tabContainer: {
     flexDirection: 'row',
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   tabText: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: 'bold',
     color: '#333',
   },
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   },
   
   headerText: {
-    fontSize: 30,
+    fontSize: 22,
     fontWeight: "bold",
   },
   
