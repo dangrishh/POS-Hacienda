@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   guestName: {
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: 'bold',
     flex: 1,
   },
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     marginLeft: 5,
   },
   roomText: {
-    fontSize: 16,
+    fontSize: 13,
     fontWeight: 'bold',
   },
   dateTag: {
@@ -40,11 +40,11 @@ const styles = StyleSheet.create({
     marginLeft: 5,
   },
   dateText: {
-    fontSize: 16,
+    fontSize: 13,
     fontWeight: 'bold',
   },
   refNumber: {
-    fontSize: 16,
+    fontSize: 13,
     color: '#555',
     marginBottom: 5,
   },
@@ -65,12 +65,12 @@ const styles = StyleSheet.create({
   },
   
   detailsLabel: {
-    fontSize: 16,
+    fontSize: 13,
     fontWeight: 'bold',
     color: '#666',
   },
   detailsValue: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: 'bold',
     color: '#000',
   },
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   buttonText: {
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: 'bold',
   },
   assignContainer: {

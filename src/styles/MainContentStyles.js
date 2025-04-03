@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: '#D9D9D9',
     borderRadius: 5,
-    flex: 0.15,
+    flex: 0.2,
     alignItems: 'center',
     marginRight: 10,
   },
@@ -23,12 +23,12 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: '#E0E0E0',
     borderRadius: 5,
-    flex: 0.15,
+    flex: 0.2,
     alignItems: 'center',
     marginRight: 10,
   },
   tabText: {
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: 'bold',
     color: '#333',
   },
@@ -40,12 +40,12 @@ const styles = StyleSheet.create({
   },
   
   headerText: {
-    fontSize: 22,
+    fontSize: 20,
     fontWeight: "bold",
   },
   
   headerSortBtn: {
-    fontSize: 18,
+    fontSize: 16,
   },
   
 });

@@ -15,8 +15,7 @@ const LeftSidebar: React.FC = () => {
   return (
     <View style={styles.sidebar}>
       <View style={styles.profileCircle} />
-      <Text style={styles.staffName}>Rhenzie Reyes</Text>
-      <Text style={styles.staffRole}>Assigned Staff</Text>
+      <Text style={styles.hotelName}>Hacienda Darasa Resort</Text>
       <TouchableOpacity style={styles.navButton} onPress={() => navigation.navigate('CheckIn')}>
         <Text style={styles.navText}>Home</Text>
       </TouchableOpacity>

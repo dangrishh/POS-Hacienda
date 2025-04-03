@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   rightSidebar: { 
-    flex: .35,  
+    flex: .3,  
     alignItems: "left",
     paddingTop: 25,
     //backgroundColor: "#555",
@@ -11,7 +11,7 @@ export default StyleSheet.create({
 
   buttonContainer: {
     //backgroundColor: "blue",
-    width: 275,
+    width: 300,
     alignItems: "flex-end" 
   },
 
@@ -33,7 +33,7 @@ export default StyleSheet.create({
 
   barHeader: {
     //backgroundColor: "blue",
-    width: 240,
+    width: 245,
     marginBottom: 15,
     flexDirection: "row",  // Align items in a row
     justifyContent: "space-between",  // Push "Sort" to the right
@@ -61,7 +61,7 @@ export default StyleSheet.create({
     padding: 15,
     alignItems: "flex-start",
     height: "80%",
-    width: 240,
+    width: 250,
     borderRadius: 5
   },
 

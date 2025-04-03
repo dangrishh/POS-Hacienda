@@ -17,10 +17,18 @@ export default StyleSheet.create({
     marginBottom: 10
   },
 
-  staffName: { 
-    fontSize: 22, 
+  hotelName: { 
+    fontSize: 18, 
     fontWeight: 'bold',
-    textAlign: "center" 
+    textAlign: "center",
+    marginBottom: 50,
+  },
+
+  staffName: { 
+    fontSize: 18, 
+    fontWeight: 'bold',
+    textAlign: "center",
+    marginBottom: 50,
   },
 
   staffRole: { 

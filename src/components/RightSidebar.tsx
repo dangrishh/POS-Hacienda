@@ -1,14 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styles from '../styles/RightSidebarStyles';
+import AddCheckinForm from './AddCheckInForm';
 
-const RightSidebar = () => {
+const RightSidebar: React.FC = () => {
+  const [modalVisible, setModalVisible] = useState(false);
   return (
     <View style={styles.rightSidebar}>
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.checkInButton}>
+          <TouchableOpacity style={styles.checkInButton} onPress={() => setModalVisible(true)}>
             <Text style={styles.checkInText}>+ Add Check In</Text>
           </TouchableOpacity>
+          <AddCheckinForm modalVisible={modalVisible} setModalVisible={setModalVisible} />
         </View>
       <View style={styles.barHeader}>
         <Text style={styles.sidebarHeader}>Cottages</Text>

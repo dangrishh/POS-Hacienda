@@ -13,7 +13,6 @@ const MainContent = () => {
       </View>
       <View style={styles.header}>
         <Text style={styles.headerText}>Today   |   Upcomings</Text>
-        <Text style={styles.headerSortBtn}>Sort</Text>
       </View>
 
       <ScrollView>
